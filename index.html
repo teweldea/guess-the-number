@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+        let num = Math.floor(Math.random() * 101);
+        let guess = prompt("Welcome to Guess a Number. Enter a number 1-100");
+        let gotIt = false;
+        let numGuesses = 0;
+
+        while(gotIt === false){
+            numGuesses++;
+            if(num == guess)
+            {
+                // alert("Congrats, you got it!");
+                gotIt = true; //break out of loop
+            }else{ //Another chance
+
+                if(num > guess){//Go higher
+                    guess = prompt("Go higher!");
+                }else{//Go lower
+                    guess = prompt("Go lower!");
+                }
+                //guess = prompt("Try again!");
+            }
+        }
+        if (numGuesses == 1){
+            alert("Congratulations! You got it! The number that was correct is " + num + " . It took " + numGuesses + " guess(es)!");
+        } else {
+            alert("Congratulations! The number was " + num + " , you guessed the number inputting " + numGuesses + "  amount of guess(es)!");
+        }
+    </script>
+</body>
+</html>
